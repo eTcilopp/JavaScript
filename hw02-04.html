@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №2</title>
+</head>
+
+<body>
+    <!--
+        4 Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+        параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их
+        и возвращать результат.
+        Обязательно использовать оператор return.
+    -->
+    <script>
+
+    function getSum(num1, num2) {
+        return num1 + num2;
+    }
+
+    function getSubstract(num1, num2) {
+        return num1 - num2;
+    }
+
+    function getMult (num1, num2) {
+        return num1 * num2;
+    }
+
+    function getDivide (num1, num2) {
+        return num1 / num2;
+    }
+
+    const range = 100;
+    const tolerance = 1000 // задается количество знаков после запятой 
+    let num1 = parseInt(Math.random() * range);
+    let num2 = parseInt(Math.random() * range);
+
+    document.write(`Число 1 равно ${num1}, число 2 равно ${num2}<br>`)
+    document.write(`Сумма чисел равна ${getSum(num1, num2)}<br>`)
+    document.write(`Разность чисел равна ${getSubstract(num1, num2)}<br>`)
+    document.write(`Произведение чисел равно ${getMult(num1, num2)}<br>`)
+    document.write(`Частное от деления чисел равно ${(Math.round(getDivide(num1, num2)*tolerance)/tolerance)}<br>`)
+    
+    </script>
+
+</body>
+
+</html>

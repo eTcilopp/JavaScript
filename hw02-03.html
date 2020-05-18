@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №2</title>
+</head>
+
+<body>
+    <!--
+        3 Объявить две переменные a и b и задать им целочисленные произвольные начальные
+    значения.
+    Затем написать скрипт, который работает по следующему принципу:
+    - если a и b положительные, вывести их разность (ноль можно считать положительным числом);
+    - если а и b отрицательные, вывести их произведение;
+    - * (этот пункт по сложнее, делайте по желанию) если а и b разных знаков, вывести их сумму;
+    Подсказка, чтобы сделать последний пункт можно также попробовать погуглить по запросу
+    «получить знак числа javascript»
+    -->
+    <script>
+        // ЗАДАЧА № 3
+
+
+        /**
+         * Функция генерирует псевдо-случайное число в диапазоне + range... -range. Значение range задается вручную.
+         * @return{int}
+         */
+
+        function getRandomNumber() {
+            const range = 100; // диапазон генерирования случайных значений
+            let randomSign = Math.random() < 0.5 ? -1 : 1;
+            return parseInt(Math.random() * range) * randomSign;
+        }
+
+        /**
+         * Функция возвращает знак числа, переданного, как параметр. Если число положительно, возвращается true. Иначе - возвращается false.
+         * @param {int}
+         * @return{boolean}
+         */ 
+        function isNumberPositive(number) {
+            return (Math.sqrt(number * number)) == number ? true : false;
+        }
+
+        "use strict";
+
+        let a = getRandomNumber();
+        let b = getRandomNumber();
+
+        document.write(`Первое число равно ${a} <br>`)
+        document.write(`Второе число равно ${b}<br>`)
+
+        if (isNumberPositive(a) == true && isNumberPositive(b) == true) {
+            document.write(`Оба числа положительны. Выводим их разность. ${a} - ${b} = ${a - b}`)
+        } else if (isNumberPositive(a) == false && isNumberPositive(b) == false) {
+            document.write(`Оба числа отрицательны. Выводим их произведение. ${a} * ${b} = ${a * b}`)
+        } else {
+            document.write(`Числа разных знаков. Выводим их сумму. ${a} ${isNumberPositive(b)? "+" : ""} ${b} = ${a + b}`) 
+        }
+    
+    </script>
+
+</body>
+
+</html>
