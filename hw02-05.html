@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №2</title>
+</head>
+
+<body>
+    <!--
+        5 Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических
+        операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+    -->
+    <script>
+        function getSum(num1, num2) {
+            return num1 + num2;
+        }
+
+        function getSubstract(num1, num2) {
+            return num1 - num2;
+        }
+
+        function getMult(num1, num2) {
+            return num1 * num2;
+        }
+
+        function getDivide(num1, num2) {
+            return Math.round(num1 / num2 * tolerance) / tolerance;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    return getSum(arg1, arg2);
+                    break;
+                case "-":
+                    return getSubstract(arg1, arg2);
+                    break;
+                case "*":
+                    return getMult(arg1, arg2);
+                    break;
+                case "/":
+                    return getDivide(arg1, arg2);
+                    break;
+                default:
+                    return 'Операция не определена'
+            }
+        }
+        
+        "use strict";
+
+        const tolerance = 1000 // задается количество знаков после запятой 
+
+        num1 = parseInt(prompt('Введите значение оператора 1'))
+        num2 = parseInt(prompt('Введите значение оператора 2'))
+        operation = prompt('Определите операцию (+ - * /)')
+        alert(`${num1} ${operation} ${num2} = ${mathOperation(num1, num2, operation)}`)
+    </script>
+
+</body>
+
+</html>
