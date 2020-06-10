@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="intro col-12">
+                <h1>Список дел на сегодня</h1>
+                <div>
+                    <div class="border1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="helpText col-12">
+                <p id="first">Введите задачу в поле</p>
+                <p id="second">Кликните на задачу чтобы пометить ее как выполненную</p>
+                <p id="third">Нажмите "X" чтобы удалить задачу из списка</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <input id="userInput" type="text" placeholder="Новая задача..." maxlength="27">
+                <button id="enter"><i class="fas fa-pencil-alt"></i></button>
+            </div>
+        </div>
+
+        <!-- Начинается пустой список -->
+        <div class="row">
+            <div class="listItems col-12">
+                <ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
